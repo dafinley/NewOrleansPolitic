@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <router-view/>
     <ChartComponent :fileUrl='fileUrl'  />    
   </div>
 </template>
@@ -18,7 +19,7 @@ export default {
     return {
       msg: 'Charbonnet Contributions',
       chartData: [],
-      fileUrl: 'http://nopolitico.starlineventures.com/static/charbonnet-contributions.json',
+      fileUrl: `${process.env.FILE_URL}static/charbonnet-contributions.json`,
     };
   },
   mounted() {

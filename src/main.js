@@ -7,6 +7,7 @@ import App from './App';
 import router from './router';
 
 Vue.config.productionTip = false;
+Vue.config.fileUrl = process.env.FILE_URL;
 Vue.use(Buefy);
 /* eslint-disable no-new */
 new Vue({

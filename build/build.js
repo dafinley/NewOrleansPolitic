@@ -29,6 +29,8 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
 
     if (stats.hasErrors()) {
       console.log(chalk.red('  Build failed with errors.\n'))
+      console.log(stats.hasErrors());
+      console.log(stats);
       process.exit(1)
     }
 

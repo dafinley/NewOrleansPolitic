@@ -1,12 +1,14 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>   
+    <h1>{{ msg }}</h1>
+    <router-view/>   
     <ChartComponent :fileUrl='fileUrl'  />    
   </div>
 </template>
 
 <script>
 // import Papa from 'papaparse';
+import Vue from 'vue';
 import ChartComponent from './ChartComponent';
 
 export default {
@@ -18,7 +20,7 @@ export default {
     return {
       msg: 'Cantrell Contriubtions',
       chartData: [],
-      fileUrl: 'http://nopolitico.starlineventures.com/static/cantrell-contributions.json',
+      fileUrl: `${Vue.config.fileUrl}static/cantrell-contributions.json`,
     };
   },
   mounted() {
